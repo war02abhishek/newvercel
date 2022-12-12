@@ -1,6 +1,6 @@
 import Order from "../models/orderModel.js"
 import Product from "../models/productModel.js"
-import ErrorHandler from "../utils/errorHandler.js"
+import ErrorHandler from "../utils/ErrorHandler.js"
 
 // import { validate } from "../models/orderModel.js"
 
