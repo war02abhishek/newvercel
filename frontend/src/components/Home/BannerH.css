@@ -1,0 +1,137 @@
+.bannerH {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--mainWhite);
+  padding: 5rem 5rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+
+  /* margin-left: 20vmax; */
+  /* margin-right: 20vmax; */
+  /* margin-top: 10vmax; */
+}
+
+.bannerH h1 {
+  font-size: 2.5rem;
+}
+.bannerH div {
+  width: 10rem;
+  height: 5px;
+  background:rgba(0, 0, 0, 0.5);
+  margin: 1.7rem auto;
+}
+.bannerH p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.Scroll {
+  width: 7rem;
+  height: 3rem;
+    cursor: pointer;
+    background-color: rgb(248, 248, 76);
+    font-family: "Belleza", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+
+  
+}
+
+
+.Scroll:hover{
+    
+     /* background: #4568dc; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(
+    to right,
+    #b06ab3,
+    #4568dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(
+    to right,
+    #b06ab3,
+    #4568dc
+  ); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  box-shadow: 0px 0px 3vmax #000;
+  /* background: transparent; */
+  scale: 1.1;
+  transition: 0.5s ease;
+  background: transparent;
+  color: aliceblue;
+     
+    
+    
+}
+@media screen and (max-width: 768px) {
+
+  .bannerH {
+
+    width: 10rem;
+    height: 10rem;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--mainWhite);
+ 
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.bannerH h1 {
+  font-size: 1.5rem;
+  font-family: "ABEEZEE", sans-serif;
+}
+.bannerH p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+  
+}
+@media screen and (max-width: 508px) {
+
+    .bannerH {
+
+    width: 5rem;
+    height: 10rem;
+  
+}
+
+.bannerH h1 {
+  font-size: 1.4rem;
+  font-family: "ABEEZEE", sans-serif;
+}
+.bannerH p {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+  font-family: "ABEEZEE", sans-serif;
+}
+.Scroll {
+  width: 5rem;
+  height: 2rem;
+    font-family: "Belleza", sans-serif;
+    font-size: 0.5rem;
+}
+  
+}
+@media screen and (max-width: 378px) {
+.bannerH{
+  width: 2rem;
+  height: 10rem;
+  font-family: Belleza,sans-serif;
+}
+.bannerH h1{
+  font-size: 1.0rem;
+}
+  
+
+}

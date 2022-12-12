@@ -1,0 +1,40 @@
+.sidebarA {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 5rem;
+  height: 5rem;
+  margin-left: 6rem;
+}
+
+.sidebarA > a:first-child {
+  padding: 0;
+}
+
+
+.sidebarA > a > img:hover {
+  filter: drop-shadow(0 0 10px tomato);
+}
+.sidebarA a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.493);
+  font: 200 1rem "Roboto";
+  padding: 2rem;
+  transition: all 0.5s;
+}
+.sidebarA a:hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+
+.sidebarA a > P {
+  display: flex;
+  align-items: center;
+}
+.sidebarA a > p > svg {
+  margin-right: 0.5rem;
+}
+
+.MuiTypography-root {
+  background-color: #fff !important;
+}
