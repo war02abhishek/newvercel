@@ -50,12 +50,17 @@ const NewProduct = () => {
 
   const categories = [
     "Laptop",
-    "Footwear",
-    "Bottom",
-    "Tops",
-    "Attire",
+    "Mobile",
+    "Tablet",
+    "TV",
     "Camera",
-    "SmartPhones",
+    "Speaker",
+    "Headphone",
+    "Attire",
+    "Watch",
+    "Other",
+    "AC",
+    "Refrigerator",
   ];
 
   useEffect(() => {

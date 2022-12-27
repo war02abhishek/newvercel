@@ -85,8 +85,8 @@
 }
 #createProductBtn {
   border: none;
-  background-color: tomato;
-  color: white;
+  background-color: #f3b925;
+  color: rgb(0, 0, 0);
   font: 300 0.9vmax "Roboto";
   width: 100%;
   padding: 0.8vmax;
@@ -98,7 +98,7 @@
 }
 
 #createProductBtn:hover {
-  background-color: rgb(179, 66, 46);
+  background-color: #c08c09;
 }
 
 @media screen and (max-width: 600px) {

@@ -138,7 +138,9 @@
 
 @media screen and (max-width: 800px) {
   .cartPage {
-    padding: 0;
+    padding-top: 6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     min-height: 60vh;
   }
 

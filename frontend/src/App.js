@@ -49,6 +49,9 @@ import UsersList from "./components/Admin/UserList.js";
 import OrderList from "./components/Admin/OrderList.js";
 import ProductList from "./components/Admin/ProductList.js";
 import NewProduct from "./components/Admin/NewProduct.js";
+import UpdateProduct from "./components/Admin/UpdateProduct.js";
+import UpdateUser from "./components/Admin/UpdateUser.js";
+import UpdateOrder from "./components/Admin/UpdateOrderP.js";
 
 function App() {
   console.log("App.js");
@@ -141,6 +144,10 @@ function App() {
           <Route path="/admin/orders" element={<OrderList/>} />
             <Route path="admin/product" element={<NewProduct/>}/>
           <Route path="/admin/products" element={<ProductList/>}/>
+            <Route path="/admin/product/:id" element={<UpdateProduct/>}/>
+            <Route path="/admin/user/:id" element={<UpdateUser/>}/>
+            <Route path="/admin/order/:id" element={<UpdateOrder/>}/>
+          
 
         
         </Routes>

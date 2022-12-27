@@ -9,17 +9,17 @@ const app = express();//express ko call kardeya
 
 import errorMiddleware from "./middleware/error.js"
 // import fileUpload from "express-fileupload"
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use(cookieParser());//()bohot jaruri hai mt bhulna
-app.use(bodyParser.urlencoded({extended: true}));
+//app.use(bodyParser.urlencoded({extended: true}));
 // app.use(fileUpload());
 
 //Config
 // dotenv.config({ path: "backend/config/config.env" });
-if (process.env.NODE_ENV !== "PRODUCTION") {
+// if (process.env.NODE_ENV !== "PRODUCTION") {
   dotenv.config({ path: "backend/config/config.env" });
-}
+// }
 
 // Route Imports
 import product from "./routes/productRoute.js"
@@ -43,18 +43,21 @@ app.use("/api/v1", payment);
 // })
 //concurently karke ek hai jisse hum ek hi commmand par both frontend and backend start kar sakte hai
 
-app.use(express.static(path.join(__dirname, "./frontend/build")));
 
-app.get("*", function (_, res) {
-  res.sendFile(
-    path.join(__dirname, "./frontend/build/index.html"),
-    function (err) {
-      if (err) {
-        res.status(500).send(err);
-      }
-    }
-  );
-});
+
+
+// app.use(express.static(path.join(__dirname, "./frontend/build")));
+
+// app.get("*", function (_, res) {
+//   res.sendFile(
+//     path.join(__dirname, "./frontend/build/index.html"),
+//     function (err) {
+//       if (err) {
+//         res.status(500).send(err);
+//       }
+//     }
+//   );
+// });
 
 app.use(errorMiddleware);
 export default app;

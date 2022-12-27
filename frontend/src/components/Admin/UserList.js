@@ -38,7 +38,7 @@ const deleteUserHandler = (id) => {
       }
     dispatch(getAllUsers());
 
-  },[dispatch])
+  },[dispatch,alert,isDeleted,dispatch])
 
   
   const columns = [

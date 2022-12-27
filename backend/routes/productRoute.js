@@ -20,7 +20,7 @@ const router = express.Router();
 router.get(
   "/products",
   getAllProducts
-);
+);//search,filter,products
 router.get(
   "/admin/products",
   isAuthenticatedUser,

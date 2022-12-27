@@ -123,7 +123,8 @@ export const orderReducer = (state = {}, action) => {
       return {
         ...state,
         loading: false,
-        isUpdated: action.payload,
+        isUpdated: true,
+        updatedOrder: action.payload,
       };
 
     case DELETE_ORDER_SUCCESS:

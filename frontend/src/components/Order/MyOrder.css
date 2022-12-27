@@ -2,6 +2,9 @@
   width: 100vw;
   max-width: 100%;
   padding: 0 7vmax;
+  padding-top: 4vmax;
+  padding-bottom: 2vmax;
+
   box-sizing: border-box;
   background-color: rgb(235, 235, 235);
   position: fixed;
@@ -57,8 +60,11 @@
 
 @media screen and (max-width: 600px) {
   .myOrdersPage {
-    padding: 0;
     height: 93vh;
+    padding: 0;
+     /* padding: 0 6vmax; */
+    padding-top: 15vmax;
+  /* padding-bottom: 2vmax; */
   }
 
   #myOrdersHeading {

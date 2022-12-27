@@ -48,9 +48,7 @@ const SideNav = () => {
         <li className="search">
           <a href="/Profile">Profile</a>
         </li>
-        <li className="search">
-          <a href="/dashboard">Admin Dash</a>
-        </li>
+       
       </ul>
     </div>
   );

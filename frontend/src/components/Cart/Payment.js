@@ -23,7 +23,6 @@ import VpnKeyIcon from "@mui/icons-material/VpnKey";
 
 import { createOrder, clearErrors } from "../../actions/orderAction";
 
-
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
   const dispatch = useDispatch();
@@ -34,10 +33,10 @@ const Payment = () => {
   const payBtn = useRef(null);
 
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
- 
+
   const { user } = useSelector((state) => state.userReducer);
   const { error } = useSelector((state) => state.newOrder);
-const userl = JSON.parse(localStorage.getItem("user"));
+  const userl = JSON.parse(localStorage.getItem("user"));
 
   const order = {
     shippingInfo,
@@ -59,14 +58,11 @@ const userl = JSON.parse(localStorage.getItem("user"));
     amount: Math.round(orderInfo.totalPrice * 100),
   };
 
-
   const submitHandler = async (e) => {
     console.log(payBtn.current.disabled);
     payBtn.current.setAttribute("disabled", true); //will disable button as soon as we submit it
 
-  
     e.preventDefault();
- 
 
     try {
       const config = {
@@ -116,13 +112,10 @@ const userl = JSON.parse(localStorage.getItem("user"));
             id: result.paymentIntent.id,
             status: result.paymentIntent.status,
           };
-   navigate("/success");
- dispatch(createOrder(order));
- 
- 
-         alert.success("Payment Succesfull");
-      
-         
+          navigate("/success");
+          dispatch(createOrder(order));
+
+          alert.success("Payment Succesfull");
         } else {
           alert.error("There's some issue while processing payment ");
         }
@@ -131,8 +124,6 @@ const userl = JSON.parse(localStorage.getItem("user"));
       payBtn.current.disabled = false;
     }
   };
-
-
 
   return (
     <>

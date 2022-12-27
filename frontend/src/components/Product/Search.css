@@ -28,14 +28,14 @@
 .searchBox > input[type="submit"] {
   height: 8%;
   border-radius: 0%;
-  background-color: tomato;
+  background-color: #f3b925;
   border: none;
   padding: 1vmax;
   width: 10%;
   font: 300 1.1vmax "Roboto";
   cursor: pointer;
   color: white;
-  transition: all 0.5s;
+  transition: all 1.5s;
 }
 
 .searchBox > input[type="submit"]:hover {

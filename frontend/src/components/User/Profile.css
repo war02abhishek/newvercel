@@ -5,6 +5,7 @@
   position: fixed;
   top: 0%;
   left: 0%;
+  padding-left: 5.0rem;
   max-width: 100%;
   background-color: white;
 }
@@ -50,7 +51,7 @@
 }
 
 .profileContainer > div:first-child > a:hover {
-  background-color: rgb(204, 78, 56);
+  background-color: #f3b925;
 }
 
 .profileContainer > div:last-child {
@@ -91,12 +92,13 @@
 }
 
 .profileContainer > div:last-child > div:last-child > a:hover {
-   background-color: rgb(204, 78, 56);
+   background-color: #f3b925;
 }
 
 @media screen and (max-width: 800px) {
   .profileContainer {
     flex-direction: column;
+    padding-left: 0rem;
   }
 
   .profileContainer > div:first-child > h1 {

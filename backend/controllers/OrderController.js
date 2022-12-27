@@ -120,6 +120,7 @@ export const getAllOrders = async (req, res, next) => {
 // Update order status -- Admin
 export const updateOrderStatus = async (req, res, next) => {
     try {
+        console.log("Updating order status")
         const order = await Order.findById(req.params.id);
 
         if (!order) {

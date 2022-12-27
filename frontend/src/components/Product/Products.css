@@ -14,7 +14,7 @@
   padding: 0 5vmax;
   margin-left: 2rem;
   justify-content: center;
-  min-height: 30vh;
+  min-height: 150vh
 }
 
 .paginationBox {
@@ -60,7 +60,7 @@
 }
 
 .pageItemActive {
-  background-color: tomato;
+  background-color: #f3b925;
 }
 
 .pageLinkActive {
@@ -103,7 +103,12 @@
   .filterBox {
     width: 8vmax;
     /* position: static; */
+    display: flex;
+    flex-direction: column;
     margin: auto;
+  }
+  .checkbox{
+    display: none;
   }
 
   .page-link {
@@ -113,4 +118,13 @@
     font: 400 1.8vmax "Roboto";
   }
 }
+@media screen and (max-width: 450px) {
+  .filterBox {
+    display: none;
+  }
+  .products {
+  padding: 0 0vmax;
+  min-height: 15vh
+}
 
+}

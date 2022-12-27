@@ -80,6 +80,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .shippingContainer{
+    padding-top: 4rem;
+  }
   .shippingBox {
     width: 100vw;
     height: 95vh;

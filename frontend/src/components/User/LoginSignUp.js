@@ -66,6 +66,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 import { useGoogleOneTapLogin } from "@react-oauth/google";
 import LockIcon from "@mui/icons-material/Lock";
+import { useAlert } from "react-alert";
 
 import {
   GOOGLE_LOGIN_SUCCESS
@@ -92,6 +93,7 @@ const LoginSignup = () => {
    const [loginEmail, setLoginEmail] = useState("");
    const [loginPassword, setLoginPassword] = useState("");
     // const [avatar, setAvatar] = useState("/profile-icon.png");
+     const alert = useAlert();
 
   const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
@@ -106,7 +108,7 @@ const LoginSignup = () => {
   const redirect = location.search ? location.search.split("=")[1] : "/Profile";
   useEffect(()=>{
  if (error) {
-  //  alert.error(error);
+   alert.error(error);
    dispatch(clearErrors());
  }
 

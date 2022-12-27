@@ -70,6 +70,7 @@ const Products = () => {
     productsCount,
     resultPerPage,
     filteredProductsCount,
+
   } = useSelector((state) => state.products);
 
   // const keyword = re;
@@ -109,7 +110,9 @@ const Products = () => {
     error,
   ]);
 
-  let count = filteredProductsCount;
+  // let count = (filteredProductsCount < productsCount)? productsCount:filteredProductsCount;
+  let count =filteredProductsCount;
+
   console.log(count);
   console.log(resultPerPage);
 
@@ -166,6 +169,7 @@ const Products = () => {
                   }}
                 >
                   <Checkbox onChange={handleChangeC} checked={state.category} />
+
                   {category}
                 </li>
               ))}
@@ -186,16 +190,17 @@ const Products = () => {
             </fieldset>
           </div>
 
-          {resultPerPage < count && (
+          {resultPerPage <= count && (
             <div className="paginationBox">
               <Pagination
-                // default classsName="pagination"
+                default
+                classsName="pagination"
                 activePage={currentPage}
                 itemsCountPerPage={resultPerPage}
                 totalItemsCount={productsCount}
                 onChange={setCurrentPageNo}
-                nextPageText="Next"
-                prevPageText="Previous"
+                nextPageText=">>"
+                prevPageText="<<"
                 firstPageText="First"
                 lastPageText="Last"
                 itemClass="page-item"

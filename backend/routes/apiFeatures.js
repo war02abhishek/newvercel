@@ -1,6 +1,7 @@
 class ApiFeatures {
   constructor(query, queryStr) {
-    this.query = query;
+    this.query = query;//khudke class ka jo query variable hai usko contructor ke dwara jo value aaye the usko 
+                        //assign karleya using this so that we can use them in out class's fns
     this.queryStr = queryStr;
   }
 
@@ -53,7 +54,7 @@ class ApiFeatures {
   pagination(resultPerPage) {
     const currentPage = this.queryStr.page || 1;
     const skip = resultPerPage * (currentPage - 1);
-
+    console.log("total skip: " + skip);
     this.query = this.query.limit(resultPerPage).skip(skip);
 
     return this;

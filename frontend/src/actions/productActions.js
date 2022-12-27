@@ -166,7 +166,7 @@ export const getAdminProduct=()=>async(dispatch)=>{
 export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
-
+    
     const { data } = await axios.delete(`/api/v1/product/${id}`);
 
     dispatch({ type: DELETE_PRODUCT_SUCCESS, payload: data });
@@ -212,7 +212,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
         headers: { "Content-Type": "application/json" },
       };
 
-    const { data } = await axios.put(`api/v1/product/${id}`,productData,config);
+    const { data } = await axios.put(`/api/v1/product/${id}`,productData,config);
     dispatch({ type: UPDATE_PRODUCT_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
